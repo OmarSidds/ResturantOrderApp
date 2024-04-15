@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
+    font-family: 'Playfair Display', sans-serif;
 }
 
 .burgerHeader{
@@ -16,8 +17,6 @@ body{
     top: 4%;
     color: white;
     font-size: 30px;
-    font-family: 'Courier New', Courier, monospace;
-    opacity: 70%;
 }
 
 .smallTextDiv{
@@ -25,9 +24,64 @@ body{
     z-index: 1;
     left: 3%;
     top: 8%;
-    color: white;
+    color: lightgray;
     font-size: 20px;
     font-family: 'Courier New', Courier, monospace;
-    opacity: 70%;
     width: 200px;
+}
+
+#menu{
+}
+
+#menuItem{
+    display: flex;
+}
+
+#itemInfoDiv{
+    width: 100%;
+}
+
+#emoji{
+    font-size: 70px;
+    margin: 0 10px;
+}
+
+#name{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 17px 0 0 0;
+}
+
+#ingredients{
+    margin: 1px 0 0 0;
+}
+
+#price{
+    font-size: 16px;
+    font-weight: 400;
+    margin: 3px 0 0 0;
+}
+
+#ingredients{
+    font-size: 14px;
+}
+
+#addItemBtn{
+    height: 40px;
+    width: 40px;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid lightgray;
+    margin-top: 25px;
+    margin-right: 25px;
+
+    font-size: 20px;
+    color: #757774;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.line{
+    border: none;
+    border-top: 1px solid lightgray;
+    width: 87%;
 }
