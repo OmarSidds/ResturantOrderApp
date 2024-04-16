@@ -80,6 +80,10 @@ body{
     font-family: 'Times New Roman', Times, serif;
 }
 
+#addItemBtn:hover{
+    background-color: lightyellow;
+}
+
 .line{
     border: none;
     border-top: 1px solid lightgray;

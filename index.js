@@ -5,7 +5,7 @@ const yourOrder = document.getElementById("yourOrder");
 
 
 const menuItems = menuArray.map(function(item){
-    const { name, ingredients, price, emoji } = item;
+    const { name, ingredients, price, emoji, id } = item;
     return `
             <div id="menuItem">
                 <div id="emojiDiv">
@@ -19,7 +19,7 @@ const menuItems = menuArray.map(function(item){
                 </div>
 
                 <div id="btnDiv">
-                    <button id="addItemBtn">+</button>
+                    <button id="addItemBtn" value=${id}>+</button>
                 </div>
             </div>
             <hr class="line">
@@ -28,3 +28,25 @@ const menuItems = menuArray.map(function(item){
 
 menu.innerHTML = menuItems
 
+let orderSummary = ''
+let orderSummaryArr = []
+document.body.addEventListener('click', function(event) {
+
+    if(event.target.value){
+        for(let item of menuArray){
+            if(item.id == event.target.value){
+                orderSummaryArr.push(item.id)
+            }
+
+        }
+    }
+
+    orderSummary += `<h2></h2>`;
+});
+
+
+
+yourOrder.innerHTML = `
+                        <h1>Your order</h1>
+                        <button>Complete order</button>
+                      ` 
