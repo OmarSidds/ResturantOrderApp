@@ -25,28 +25,57 @@ const menuItems = menuArray.map(function(item){
             <hr class="line">
     `
 }).join("")
-
 menu.innerHTML = menuItems
 
-let orderSummary = ''
+
+
+let orderSummary = '';
+let orderTotal = '';
 let orderSummaryArr = []
 document.body.addEventListener('click', function(event) {
 
     if(event.target.value){
         for(let item of menuArray){
             if(item.id == event.target.value){
-                orderSummaryArr.push(item.id)
+                orderSummaryArr.push(item)
             }
 
         }
     }
 
-    orderSummary += `<h2></h2>`;
+    console.log(orderSummaryArr[0].name)
+
+    
+    orderSummary = orderSummaryArr.map(function(orderItem){
+        return `<div class="individualOrderItemDiv">
+                    <div class="itemAndBtn">
+                        <h2>${orderItem.name}</h2>
+                        <button class="removeBtn">remove</button>
+                    </div>
+                    <h2>$${orderItem.price}</h2>
+                </div>`
+                ;
+    }).join('');
+
+    let totalPrice = orderSummaryArr.reduce((accumulator, order) => {
+        return accumulator + order.price;
+      }, 0);
+
+    orderTotal = `<div class="orderTotal">
+                        <h2>Total price:</h2>
+                        <h2>$${totalPrice}</h2>
+                  </div>
+                 `
+
+    yourOrder.innerHTML = ` <h2 class="yourOrderTitle">Your order</h2>
+                            ${orderSummary}
+                            <hr class="line">
+                            ${orderTotal}
+                            <button id="completeOrderBtn">Complete order</button>
+                            `
+                            ;
 });
 
 
 
-yourOrder.innerHTML = `
-                        <h1>Your order</h1>
-                        <button>Complete order</button>
-                      ` 
+
