@@ -4,9 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omar's Diner</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Sedan:ital@0;1&display=swap" rel="stylesheet">
     <link href="index.css" rel="stylesheet">
 
 </head>
@@ -24,6 +21,18 @@
     <div id="menu"></div>
 
     <div id="yourOrder"></div>
+
+    <div id="cardDetails">
+        <h2>Enter Card Details</h2>
+        <form class="formEntry" id="formInfo">
+            <input type="text" id="username" name="username" placeholder="Enter your name" class="formInput" required>
+            <input type="number" name="card-Number" placeholder="Enter card number" class="formInput">
+            <input type="password" name="CVV" placeholder="Enter CVV" class="formInput">
+            <button type="button" class="formBtn" id="formBtn" value="formBtn" onclick="formSubmit()">Pay</button>
+        </form>
+    </div>
+
+    <div id="orderConfirm"></div>
 
     <script type="module" src="data.js"></script>
     <script type="module" src="./index.js"></script>

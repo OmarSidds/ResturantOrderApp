@@ -2,7 +2,6 @@ body{
     margin: 0;
     padding: 0;
     width: 100%;
-    font-family: 'Playfair Display', sans-serif;
 }
 
 .burgerHeader{
@@ -104,6 +103,7 @@ body{
 .yourOrderTitle{
     text-align: center;
     font-weight: 600;
+    margin-bottom: 40px;
 }
 
 .individualOrderItemDiv{
@@ -118,9 +118,10 @@ body{
 .itemAndBtn h2, .individualOrderItemDiv h2, .orderTotal h2{
     font-size: 20px;
     font-weight: 500;
+    margin: 5px 0;
 }
 
-.removeBtn{
+#removeBtn{
     background-color: white;
     color: #a9a9a9;
     border: none;
@@ -128,13 +129,14 @@ body{
     margin-left: 4px;
 }
 
-.removeBtn:hover{
+#removeBtn:hover{
     color: red;
 }
 
 .orderTotal {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px;
 }
 
 #completeOrderBtn {
@@ -149,6 +151,77 @@ body{
     font-weight: 600;
 }
 
-#completeOrderBtn:hover {
+#completeOrderBtn:hover, .formBtn:hover {
     background-color: #00aa71;
+}
+
+.lineBlack {
+    border-top: 1px solid black;
+}
+
+
+/* Card Details widget CSS */
+#cardDetails {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    height: 290px;
+    width: 400px;
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+    font-family: sans-serif;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+.formEntry {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+
+.formInput {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+    padding: 0.8em;
+}
+
+.formBtn {
+    width: 100%;
+    margin: 5px auto;
+    margin-top: 20px;
+    padding: 0.8em;
+    border: none;
+    background-color: #01eb9d;
+    border-radius: 2px;
+
+    color: white;
+    font-weight: bold;
+}
+
+/* Order Confirm Section */
+
+#orderConfirm {
+    display: none;
+    background-color: #ECFDF5;
+    margin: 40px 20px;
+    height: 70px; 
+}
+
+#orderConfirm div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#orderConfirm div p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #065F46;
 }
